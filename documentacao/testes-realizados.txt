@@ -1,0 +1,13 @@
+TESTES DE CONECTIVIDADE E FUNCIONALIDADE:
+
+1. Teste de Ping (Camada 3):
+   - Realizado ping de PC01 (192.168.1.2) para Servidor (10.0.0.2).
+   - Resultado: Sucesso (pacotes recebidos e enviados com sucesso através do roteamento).
+
+2. Teste de Acesso DNS:
+   - Acesso realizado via Web Browser do PC01 usando o domínio 'www.frostmind.com.br'.
+   - Resultado: Sucesso (resolução de nome operante, página carregada).
+
+3. Teste de Aplicação:
+   - Verificação do serviço HTTP: O servidor respondeu corretamente na porta 80.
+   - Verificação JavaScript: Botão 'Ver Demonstração' e formulário de contato testados e operando sem erros.
