@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrostMind | Digital Coders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="intro-ativa">
+
+    <div id="intro-overlay">
+        <video id="intro-video" autoplay muted playsinline>
+            <source src="../imagens/abertura.mp4" type="video/mp4">
+        </video>
+        <button id="pular-intro">Pular Intro</button>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="../imagens/logo.jpeg" alt="Mascote Digital Coders" class="logo-dc">
+            <span class="brand-name">Digital Coders</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#problema">O Desafio</a></li>
+            <li><a href="#solucao">Sistema GELA</a></li>
+            <li><a href="#demonstracao">Demonstração</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#equipe">Equipe</a></li>
+        </ul>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <h1>Inteligência em Refrigeração</h1>
+        <p>Monitoramento preditivo para sistemas de refrigeração industrial com IA e IoT.</p>
+        <button id="botao-demonstracao" class="btn-neon">Ver Demonstração</button>
+    </header>
+
+    <main>
+        <section id="problema" class="secao-conteudo">
+            <article class="cartao">
+                <h2>O Desafio Operacional</h2>
+                <p>Equipamentos de refrigeração geram um volume massivo de dados. A dependência de análises manuais
+                    resulta em baixa velocidade na resposta aos alarmes, risco de perda de produtos perecíveis e atrasos
+                    operacionais. O sistema visa solucionar essas ineficiências na triagem e no tempo de resposta.</p>
+            </article>
+        </section>
+
+        <section id="solucao" class="secao-conteudo">
+            <article class="cartao destaque">
+                <h2>A Solução: FrostMind & GELA Monitor</h2>
+                <p>Nossa arquitetura utiliza análise de dados e Inteligência Artificial para automatizar o diagnóstico
+                    de alarmes e reduzir a dependência da intervenção humana.</p>
+                <ul class="lista-tecnologias">
+                    <li><strong>Back-End:</strong> Python e Flask para o gerenciamento de APIs e microsserviços de alto
+                        desempenho.</li>
+                    <li><strong>IA Preditiva:</strong> Algoritmo ARIMA(2,1,1) implementado através da biblioteca
+                        statsmodels para gerar projeções térmicas futuras e calcular o risco de falha.</li>
+                    <li><strong>Comunicação Ativa & Cognitiva:</strong> O motor cognitivo utiliza a API do Google Gemini
+                        para gerenciar regras de negócio, enquanto o Twilio atua na comunicação instantânea via WhatsApp
+                        com as equipes.</li>
+                    <li><strong>Bancos de Dados:</strong> Redis para cache em memória de leituras ultrarrápidas e SQLite
+                        para persistência dos dados históricos.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="demonstracao" class="secao-conteudo">
+            <article class="cartao">
+                <h2>Demonstração do Sistema</h2>
+                <p style="margin-bottom: 20px;">Assista abaixo ao vídeo demonstrativo do agente cognitivo GELA e da
+                    interface integrada operando em tempo real:</p>
+                <div class="video-container">
+                    <video controls poster="../imagens/frostmind.jpeg">
+                        <source src="../imagens/frostmindvideo.mp4" type="video/mp4">
+                        Seu navegador não suporta a reprodução de vídeos.
+                    </video>
+                </div>
+            </article>
+        </section>
+
+        <section id="contato" class="secao-conteudo">
+            <article class="cartao">
+                <h2>Fale com a Equipe</h2>
+                <p>Tem dúvidas sobre o sistema ou quer solicitar uma implementação? Envie uma mensagem!</p>
+
+                <form id="form-contato">
+                    <div class="grupo-input">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" required placeholder="Digite seu nome">
+                    </div>
+                    <div class="grupo-input">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" required placeholder="seu@email.com">
+                    </div>
+                    <div class="grupo-input">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" rows="4" required
+                            placeholder="Como podemos ajudar com sua refrigeração?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-neon">Enviar Mensagem</button>
+                </form>
+
+                <p id="feedback-form"></p>
+            </article>
+        </section>
+
+        <section id="equipe" class="secao-conteudo">
+            <article class="cartao">
+                <h2>Desenvolvido por Digital Coders</h2>
+                <div class="membros-equipe">
+                    <p><strong>Gustavo Lucas Moreira</strong></p>
+                    <p><strong>Klaiver Matheus Ferreira de Macedo</strong></p>
+                    <p><strong>Matheus Henrique Heppe Santana</strong></p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <img src="../imagens/logo.jpeg" alt="Digital Coders Logo" class="footer-logo">
+        <p>Projeto Integrador - UniSenaiPR Campus CIC | Engenharia de Software</p>
+        <p>Professor orientador: Elton</p>
+        <p>&copy; 2026 Digital Coders. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main: #0b0510;
+    --bg-card: #160b24;
+    --neon-purple: #c77dff;
+    --deep-purple: #5a189a;
+    --text-light: #e0e0e0;
+    --text-muted: #a9a9a9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-light);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+
+    /* CAMINHO CORRIGIDO: Saindo da pasta frontend (../) e entrando na imagens */
+    background-image: linear-gradient(rgba(11, 5, 16, 0.85), rgba(11, 5, 16, 0.95)), url('../imagens/frostmind.jpeg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.intro-ativa {
+    overflow: hidden;
+}
+
+#intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-main);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+#intro-overlay.escondido {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#intro-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#pular-intro {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10000;
+    transition: 0.3s;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+#pular-intro:hover {
+    background-color: var(--neon-purple);
+    color: var(--bg-main);
+    border-color: var(--neon-purple);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(22, 11, 36, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--deep-purple);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-dc {
+    width: 40px;
+    border-radius: 8px;
+}
+
+.brand-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--neon-purple);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--neon-purple);
+}
+
+.hero-section {
+    text-align: center;
+    padding: 260px 20px 140px;
+    position: relative;
+}
+
+.hero-section h1 {
+    color: #ffffff;
+    font-size: 3.8em;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.9);
+}
+
+.hero-section p {
+    color: var(--neon-purple);
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.secao-conteudo {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cartao {
+    background-color: rgba(22, 11, 36, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(90, 24, 154, 0.4);
+}
+
+.cartao.destaque {
+    border-left: 5px solid var(--neon-purple);
+}
+
+.cartao h2 {
+    color: var(--neon-purple);
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+.cartao p {
+    font-size: 1.1em;
+}
+
+.lista-tecnologias {
+    margin: 20px 0 20px 30px;
+    color: var(--text-muted);
+    font-size: 1.1em;
+}
+
+.lista-tecnologias li {
+    margin-bottom: 12px;
+}
+
+.lista-tecnologias strong {
+    color: var(--text-light);
+}
+
+.video-container {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(199, 125, 255, 0.2);
+    background-color: #000;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+#form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.grupo-input label {
+    color: var(--neon-purple);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.grupo-input input,
+.grupo-input textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--deep-purple);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--text-light);
+    font-family: inherit;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.grupo-input input:focus,
+.grupo-input textarea:focus {
+    outline: none;
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 8px rgba(199, 125, 255, 0.5);
+}
+
+#feedback-form {
+    margin-top: 20px;
+    font-weight: bold;
+    min-height: 24px;
+}
+
+.btn-neon {
+    background-color: transparent;
+    color: var(--neon-purple);
+    border: 2px solid var(--neon-purple);
+    padding: 15px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-neon:hover {
+    background-color: var(--neon-purple);
+    color: var(--bg-main);
+    box-shadow: 0px 0px 20px var(--neon-purple);
+}
+
+.membros-equipe {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--text-muted);
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+.membros-equipe strong {
+    color: var(--text-light);
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(22, 11, 36, 0.95);
+    color: var(--text-muted);
+    font-size: 14px;
+    border-top: 1px solid var(--deep-purple);
+}
+
+.footer-logo {
+    width: 60px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
